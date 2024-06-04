@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotels</title>
+</head>
+<body>
+    <h1>Hotels</h1>
+    <ul>
+        <% hotels.forEach(hotel => { %>
+         <li>
+            <a href="/hotels/<%= hotel.id %>"></a><%= hotel.name %></a>"
+            - <% hotel.location %>
+            - <% hotel.rating %> stars
+         </li>
+        <% }) %>
+    </ul>
+    <h2>Add a new hotel</h2>
+    <form action="/hotels" method="POST">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="text" name="location" placeholder="Location" required />
+      <textarea name="description" placeholder="Description" required></textarea>
+      <input type="number" name="rating" placeholder="Rating" step="0.2" min="0" max="10" required />
+      <button type="submit">Add Hotel</button>
+    </form>
+</body>
+</html>
