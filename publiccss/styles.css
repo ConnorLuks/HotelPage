@@ -1,0 +1,79 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: grey;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #321;
+}
+
+.hotels-list {
+    list-style: none;
+    padding: 0;
+}
+
+.hotel-item {
+    padding: 10px;
+    border-bottom: 1px solid #cbc;
+}
+
+.hotel-item a {
+    text-decoration: none;
+    color: purple;
+}
+
+.hotel-item a:hover {
+    text-decoration: underline;
+}
+
+.hotel-location, .hotel-rating {
+    display: inline-block;
+    margin-left: 10px;
+    color: grey;
+}
+
+.hotel-form {
+    margin-top: 20px;
+}
+
+.hotel-form input, .hotel-form textures {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+}
+
+.hotel-form button {
+    padding: 10px 15px;
+    background-color: lightskyblue;
+    color: whitesmoke;
+    border: none;
+    border-radius: 4px;
+    cursor: default;
+}
+
+.hotel-form buttom:hover {
+    background-color: lightskyblue;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: mediumturquoise;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

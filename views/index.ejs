@@ -5,17 +5,17 @@
 </head>
 <body>
     <h1>Hotels</h1>
-    <ul>
+    <ul class="hotel-list">
         <% hotels.forEach(hotel => { %>
-         <li>
+         <li class="hotel-item">
             <a href="/hotels/<%= hotel.id %>"></a><%= hotel.name %></a>"
-            - <% hotel.location %>
-            - <% hotel.rating %> stars
+            <span class="hotel-location"><%= hotel.location %></span>
+            <span class="hotel-rating"><%= hotel.rating %> stars</span>
          </li>
         <% }) %>
     </ul>
     <h2>Add a new hotel</h2>
-    <form action="/hotels" method="POST">
+    <form action="/hotels" method="POST" class="hotel-form">
       <input type="text" name="name" placeholder="Name" required />
       <input type="text" name="location" placeholder="Location" required />
       <textarea name="description" placeholder="Description" required></textarea>
