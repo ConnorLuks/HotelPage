@@ -1,21 +1,15 @@
-const db = require('../models');
-const Hotel = db.Hotel;
+const express = require('express');
+const router = express.Router();
+const { getHotels } = require('../models/hotelModel');
 
-//GET List the hotels
-exports.getAllHotels = async (req, res) => {
-    const hotels = await Hotel.findAll();
+router.get('/', (req, res) => {
+    res.render('index', { hotels: null});
+});
+
+router.post('/search', async (req, res) => {
+    const location = req.body.location;
+    const hotels = await getHotels(location);
     res.render('index', { hotels });
-};
+});
 
-//GET find the id for a specific hotel
-exports.getHotel = async (req, res) => {
-    const hotel = await Hotel.findByPk(req.params.id);
-    res.render('hotel', { hotel });
-};
-
-//POST makes a new location for hotels
-exports.creatHotel = async (req, res) => {
-    const { name, location, description, rating } = req.body;
-    await Hotel.create({ name, location, description, rating });
-    res.redirect('/hotels');
-};
+module.exports = router;
