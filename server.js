@@ -1,11 +1,11 @@
 const express = require('express');
-//const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middle Ware
-app.use(express.urlencoded({ extended: true})); //bodyParser no longer used in Express
+app.use(bodyParser.urlencoded({ extended: true})); //bodyParser no longer used in Express
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Views

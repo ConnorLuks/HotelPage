@@ -8,7 +8,7 @@ const getHotels = async (location) => {
         const response = await axios.get(url);
         // check for issues and logs them
         if (response.data.status !== 'OK') {
-            console.error('Error fetching data from Google Places API', reponse.data.status);
+            console.error('Error fetching data from Google Places API', response.data.status);
             return [];
         }
         return response.data.results;
