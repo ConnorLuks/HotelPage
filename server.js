@@ -8,9 +8,14 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true})); //bodyParser no longer used in Express
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Views
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+// Views Removed the EJS
+//app.set('view engine', 'ejs');
+//app.set('views', path.join(__dirname, 'views'));
+
+// Static HTMl
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
 
 // Controlls
 const hotelController = require('./controllers/hotelController');
