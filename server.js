@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Controlles
-const hotelController = require('./controllers/hotelConstroller');
+const hotelController = require('./controllers/hotelController');
 app.use('/', hotelController);
 
 app.listen(PORT, () => {
