@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: `location=${encodedURIComponent(location)}`
+            body: `location=${encodeURIComponent(location)}`
         });
 
         const hotels = await response.json();
