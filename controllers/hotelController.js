@@ -6,7 +6,7 @@ router.post('/search', async (req, res) => {
     const location = req.body.location;
     console.log(`Searching for hotels in: ${location}`); // logs the search location
     const hotels = await getHotels(location);
-    console.log(hotels); // logs the hotels
+    console.log(`Hotels found: ${hotels.length}`); // logs the hotels
     res.json(hotels);
 });
 
