@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         const location = document.getElementById('location').value;
+        console.log(`Searching for hotels in: ${location}`);
+        
         try {
             const response = await fetch('/search', {
                 method: 'POST',
@@ -14,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const hotels = await response.json();
-            console.log(hotels); // Logs response
+            console.log('Hotels found:', hotels); // Logs response
+
             const hotelsContainer = document.getElementById('hotels');
             hotelsContainer.innerHTML = '';
 
