@@ -3,18 +3,46 @@
 <head>
     <meta charset="UTF=8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/styles.css">
     <title>Hotel Finder</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <!--<link rel="stylesheet" href="/css/styles.css"> put after incase order does not work --> 
 </head>
 <body>
-    <div class="container">
-        <h1>Hotels Finder</h1>
+    <div class="container" id="container1">
+        <button id="backButton" class="button" onClick="history.back()">Go Back</button>
+        <header id="hotels-header">
+            <img id="hotelimage" img src="/assets/hotelsmainimage.jpg" alt="hotel image">
+            Hotel image for page
+        </header>
+        <hr id="line">
+        <div id="photo-of-hotel">
+            <h3>Find a Hotel</h3>
+            <hr id="line2">
+            <img id="magnify" img src="/assets/magnifying-glass-vector-1262740.jpg" alt="magnify"
+            <br>
+            <button id="hotel-location" class="button">Shows the hotel location</button>
+        </div>
+        <div id="hotel-information">
+            <h3 id="hotel-information-header">main info fill in </h3>
+            <p id="hotel-information-text">more info to fill in</p>
+            <footer id="info-footer"> hotels found fill in</footer> 
+        </div>
+    </div>     
+    <div class="container" id="container2">
+        <img id='hotels-logo' img src="/assets/hotelicon.jpg" alt="hotel icon">
+        <!-- <h2> id="hotellocationplace"></h2 !-->
+        <h1>Hotels Finder</h1> <!-- need to reorder-->
         <form id="searchForm">
             <input type="text" id="location" name="location" placeholder="Enter a location" required>
             <button type="submit">Search</button>
         </form>
         <div class="hotels" id="hotels"></div>
     </div>
-    <script scr="/js/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN3TP93F6l75a2qIh9ba7uUGbaLJ1zG3M&loading=async&libraries=places&callback=initAutocomplete" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <script src="/public/js/app.js"></script>
+    <script src="/controllers/hotelController.js"></script>
+    <script src="/models/hotelModel.js"></script>
+    <script src="/server.js"></script>
 </body>
 </html>
