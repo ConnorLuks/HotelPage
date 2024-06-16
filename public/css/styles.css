@@ -1,6 +1,20 @@
+#map {
+    height: 40%;
+    width: 40%;
+
+}
+
+htlm,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 #backButton {
     float: inline-end;
 }
+
 .button {
     background-color: rgb(238, 225, 45); 
     color: black;
@@ -8,13 +22,14 @@
     border-color: rgb(61, 60, 63);
     padding: 5px;
 }
+
 .button:hover {
     border-color: aquamarine;
     letter-spacing: 0.07em;
     box-shadow: 0 0 5px #0056b3;
 }
 
-#container1 {
+#container1 { 
     margin: 1%;
     background-color: whitesmoke;
     padding: 2%;
@@ -33,6 +48,12 @@
     width: 100%;
     border: solid 1px rgb(247, 17, 17);
     color: rgb(247, 17, 17);
+}
+
+#line2 {
+    width: 100%;
+    border: solid 1px rgb(61, 60, 63);
+    color:rgb(61, 60, 63);
 }
 
 #hotel-information {

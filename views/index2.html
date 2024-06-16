@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <title>Hotel Finder</title>
+    <!--<link rel="stylesheet" href="/css/styles.css"> put after incase order does not work --> 
+</head>
+<body>
+    <div class="container" id="container1">
+        <button id="backButton" class="button" onClick="history.back()">Go Back</button>
+        <header id="hotels-header">
+            <img id="hotelimage" img src="/assets/Screenshot 2024-06-16 153820.png" alt="hotel image">
+            Warp Speed Hotel Finder
+        </header>
+        <hr id="line">
+        <div id="photo-of-hotel">
+            <h3></h3>
+            <hr id="line2">
+            <img id="magnify" img src="/assets/hotelsmainimage.jpg" alt="magnify"
+            <br></br>
+          <!--  <button id="hotel-location" class="button">Shows the hotel location</button> !!! alternate incase other does not work-->
+        </div>
+        <div id="hotel-information">
+            <h4 id="hotel-information-header">Welcome to Warp Speed Hotel Finder, your one-stop destination for finding the best hotels around the world. 
+            <br></br>Whether you're planning a luxurious vacation, a business trip, or a weekend getaway, Warp Speed Hotel Finder is here to help you find the perfect place to stay. 
+            <br></br>With our user-friendly interface, comprehensive hotel listings, and honest reviews, you'll have all the information you need to make an informed decision. </h4>
+            <p id="hotel-information-text">How To Use. <br></br>
+
+                1: Search - Enter your destination, dates, and preferences to find the best hotels that match your criteria.
+                <br></br>
+                Compare: Browse through the list of hotels, if you find a suitable hotel proceed to the next section, or you can revise or randomize your search.
+                <br></br>
+                Book: Once you find the perfect hotel, book your stay directly through our website for a hassle-free experience. (in progress)
+                <br></br>
+                Enjoy: Have a memorable stay at your chosen hotel! knowing you made the best choice with Warp Speed Hotel Finder</p>
+            <footer id="info-footer"> * * *</footer> 
+        </div>
+    </div>     
+    <div class="container" id="container2">
+        <img id='hotels-logo' img src="/assets/hotelicon.jpg" alt="hotel icon">
+        <!-- <h2> id="hotellocationplace"></h2 !-->
+        <h2 id="hotelfoundlocation"></h2>
+        <hr id="line2">
+        <br></br>
+        <h1>Hotels Finder</h1> <!-- need to reorder-->
+        <form id="searchForm">
+            <input type="text" id="location" name="location" placeholder="Enter a location" required>
+            <button type="submit">Search</button>
+        </form>
+        <div class="hotels" id="hotels"></div>
+        <div id="map"></div>
+        <div id="sidebar">
+            <h2>Your Hotel Results</h2>
+            <ul id="places"></ul>
+            <button id="more">Click to view more Hotel options</button>
+        </div>
+        <div id="map"></div>
+
+    </div>
+
+</body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN3TP93F6l75a2qIh9ba7uUGbaLJ1zG3M&loading=async&libraries=places&callback=initAutocomplete" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <script src="/public/js/app.js"></script>
+    <script src="/controllers/hotelController.js"></script>
+    <script src="/models/hotelModel.js"></script>
+    <script src="/server.js"></script>
+</html>
