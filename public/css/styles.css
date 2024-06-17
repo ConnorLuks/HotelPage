@@ -1,6 +1,6 @@
 #map {
-    height: 40%;
-    width: 40%;
+    height: 60%;
+    width: 60%;
 
 }
 
@@ -30,14 +30,15 @@ body {
 }
 
 #container1 { 
-    margin: 1%;
+    margin: 5%;
     background-color: whitesmoke;
     padding: 2%;
 }
 #hotelimage {
-    width: 40px;
+    width: 550px;
     margin-bottom: 15px;
-    margin-right: 15px;
+    margin-right: 10px;
+
 }
 #hotels-header {
     font-weight: bold;
@@ -77,17 +78,11 @@ body {
 
 #magnify {
     display: block;
-    width: 100px;
+    width: 300px;
     margin: auto;
 }
 
-#restaurant-icon { /* hotels logo */
-    width: 40px;
-    margin-bottom: 15px;
-    margin-right: 15px;
-    display: block;
-    float: left;
-}
+
 #info-footer {
     margin-top: 5%;
     text-align: center;
@@ -107,7 +102,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 130vh;
     margin: 0;
     padding: 0;
 }

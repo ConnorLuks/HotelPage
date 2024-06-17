@@ -1,6 +1,6 @@
 let site = JSON.parse(localStorage.getItem('City'));
  
-  document.getElementById("hotelfoundlocation").innerHTML = "Find Hotels Near" + site + ":";
+  document.getElementById("hotelfoundlocation").innerHTML = "Find Hotels Near " + site + ":";
   
 function initMap() {
   let latitude = JSON.parse(localStorage.getItem('lats'));
@@ -20,7 +20,7 @@ console.log(numLng)
 const area = { lat: numLat, lng: numLng };
 console.log(area)
   service.nearbySearch(
-    { location: area, radius: 500, type: "hotel" },
+    { location: area, radius: 600, type: "lodging" },
     (results, status) => {
       if (status !== "OK" || !results) return
         addPlaces(results, map);

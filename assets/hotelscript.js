@@ -93,7 +93,7 @@ function storeInput() {
             }
 
             if (newLat !== '' && newLong !=='') {
-                 window.location.assign('index2.html')
+                 window.location.assign('index4.html')
                  
             } else {
                  alert("Please enter a valid address")
